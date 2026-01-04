@@ -5,26 +5,26 @@ This project focuses on predicting house prices using a hybrid deep learning app
 The key idea is to capture both property-level attributes (such as size, rooms, location features) and visual neighborhood context extracted from satellite images, which often has a significant impact on real estate prices.
 
 The hybrid model is the primary contribution of this project, while tabular-only and CNN-only models are included for comparison and analysis.
-
+```text
 House Price Prediction Model/
     │
     ├── datasets/
-    |       └── Raw tabular housing datasets
+    |   └── Raw tabular housing datasets
     │
     ├── data_fetcher.py
-    |          └── Downloads satellite images using property coordinates
+    |   └── Downloads satellite images using property coordinates
     │
     ├── preprocessing.ipynb
-    |      └── Data cleaning, feature engineering, and dataset preparation
+    |   └── Data cleaning, feature engineering, and dataset preparation
     │
     ├── model_training.ipynb
-    |       └── Contains tabular, CNN-only, and hybrid models (primary model)
+    |   └── Contains tabular, CNN-only, and hybrid models (primary model)
     |
     ├── best_hybrid_model_final.h5
-    |       └── Final trained hybrid model (primary model)
+    |   └── Final trained hybrid model (primary model)
     |
     ├── cnn_training.h5
-    │       └── Trained CNN-only model
+    │   └── Trained CNN-only model
     │
     ├── README.md
     │
