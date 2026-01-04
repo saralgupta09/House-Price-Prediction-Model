@@ -7,28 +7,28 @@ The key idea is to capture both property-level attributes (such as size, rooms, 
 The hybrid model is the primary contribution of this project, while tabular-only and CNN-only models are included for comparison and analysis.
 
 House Price Prediction Model/
-│
-├── datasets/
-│   └── Raw tabular housing datasets
-│
-├── data_fetcher.py
-│   └── Downloads satellite images using property coordinates
-│
-├── preprocessing.ipynb
-│   └── Data cleaning, feature engineering, and dataset preparation
-│
-├── model_training.ipynb
-│   └── Contains tabular, CNN-only, and hybrid models (primary model)
-|
-├── best_hybrid_model_final.h5
-│   └── Final trained hybrid model (primary model)
-|
-├── cnn_training.h5
-│   └── Trained CNN-only model
-│
-├── README.md
-│
-└── requirements.txt
+    │
+    ├── datasets/
+    |       └── Raw tabular housing datasets
+    │
+    ├── data_fetcher.py
+    |          └── Downloads satellite images using property coordinates
+    │
+    ├── preprocessing.ipynb
+    |      └── Data cleaning, feature engineering, and dataset preparation
+    │
+    ├── model_training.ipynb
+    |       └── Contains tabular, CNN-only, and hybrid models (primary model)
+    |
+    ├── best_hybrid_model_final.h5
+    |       └── Final trained hybrid model (primary model)
+    |
+    ├── cnn_training.h5
+    │       └── Trained CNN-only model
+    │
+    ├── README.md
+    │
+    └── requirements.txt
 
 
 File Descriptions
@@ -52,9 +52,9 @@ preprocessing.ipynb
 model_training.ipynb
 
     These notebooks contain all modeling logic, including:
-        A tabular-only model
+        A tabular-only model (For comparision purposes)
+        The hybrid model (main model of the project, from cell 13 to cell 25)
         A CNN-only model
-        The hybrid model (main model of the project)
 
     They also include:
         Code for model evaluation
@@ -65,9 +65,9 @@ requirement.txt
     contains all the modules required for the project
 
 
-⚠️ Important note for evaluators:
-Running these notebooks is optional. Pretrained model files are already provided. Evaluators may choose to:
-Directly load the trained models Or retrain the models if desired
+⚠️ Important:
+    Running these notebooks is optional. Pretrained model files are already provided.
+    Directly load the trained models Or retrain the models if desired
 
 
 
@@ -80,8 +80,10 @@ This project was developed and tested using:
     Python: 3.10
     TensorFlow: 2.13
     NumPy: 1.23.5
+    and other libararies mentioned in the requirements.txt
 
-Newer TensorFlow versions (2.14+) introduce breaking changes and are not compatible with this codebase.
+Important Note
+    Newer TensorFlow versions (2.14+) introduce breaking changes and are not compatible with this codebase.
 
 
 Setup Steps
@@ -96,10 +98,6 @@ Setup Steps
     Windows
     venv\Scripts\activate
 
-
-    Install dependencies:
-    pip install -r requirements.txt
-
 3).Install all required packages
 
     pip install -r requirements.txt
@@ -110,22 +108,23 @@ Setup Steps
 
         py -3.10 data_fetcher.py
 
-    Preprocess the data
+5).Preprocess the data
+
     Run preprocessing.ipynb
 
-    Model training (optional)
+6).Model training
+
     Run model_training.ipynb for the hybrid model
 
-
-Alternatively, pretrained models can be loaded directly without retraining.
+    Alternatively, pretrained models can be loaded directly without retraining.
 
 
 Notes for Evaluators
 
-Training deep models is optional
+    Training deep models is optional
 
-Pretrained checkpoints are provided for direct evaluation
+    Pretrained checkpoints are provided for direct evaluation
 
-The project is CPU-compatible; no GPU is required
+    The project is CPU-compatible; no GPU is required
 
-The hybrid model is the primary contribution
+    The hybrid model is the primary contribution
